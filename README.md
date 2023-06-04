@@ -1,5 +1,5 @@
 <p align="center">
-Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologias WEB. 
+DevLinks é um projeto para um agregador de links persnalizado para desktop e mobile utilizando as melhores tecnologias de desenvolvimento WEB. 
 </p>
 
 <p align="center">
@@ -14,6 +14,10 @@ Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnolog
 </p>
 
 <br>
+
+<p align="center">
+  <img alt="projeto DevLinks" src="https://efficient-sloth-d85.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F59acdc3a-1700-4b57-a8c7-26dbd2d6289a%2FImage_Notion.png?id=9500adf1-1496-45dd-8a4e-1c67105474aa&table=block&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&width=800&userId=&cache=v2" width="100%">
+</p>
 
 
 
