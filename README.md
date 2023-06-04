@@ -1,4 +1,4 @@
-## <p align="center>DevLinks</p>
+## <p align="center">DevLinks</p>
 
 <p align="center">
 DevLinks é um projeto para um agregador de links persnalizado para desktop e mobile utilizando as melhores tecnologias de desenvolvimento WEB. 
