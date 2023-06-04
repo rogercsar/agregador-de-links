@@ -77,11 +77,16 @@ body * {
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
+    animation: slide-dark 0.3s;
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
+   animation: slide-light 0.3s forwards;
+}
+
+
+#switch button:hover {
+    outline: 6px solid var(--highlight-color);
 }
 
 #switch span {
@@ -156,4 +161,32 @@ footer {
     padding: 24px 0;
     text-align: center;
     font-size: 14px;
+}
+
+/*@media (min-width: 700px) {
+    :root {
+        --bg-url: var(--bg-url)
+    }
+
+    .light {
+        --bg-url: var(var--bg-url)
+    }
+}*/
+
+@keyframes slide-light {
+    from{
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-dark {
+    from{
+        left: 50%;
+    } 
+    to {
+        left: 0;
+    }
 }
