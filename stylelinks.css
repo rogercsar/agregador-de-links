@@ -52,12 +52,13 @@
 }
 
 #links-text fieldset input {
-    width: 300px;
+    width: 320px;
     height: 30px;
     color: black;
     font-weight: 400;
     font-size: 14px;
-    border-radius: 8px;
+    border-radius: 5px;
+    margin: 2px;
 }
 
 /*Links*/
