@@ -35,7 +35,7 @@ body * {
 
 #container {
     width: 360px;
-    height: 712px;
+    height: 612px;
     margin: 70px auto 0px;
 }
 
@@ -43,7 +43,7 @@ body * {
 
 #profile {
     text-align: center;
-    padding: 24px;
+    padding: 22px;
 }
 
 #profile img {
@@ -166,7 +166,7 @@ ul li a:hover {
     display: flex;
     justify-content: center;
     padding: 24px 0;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 #social-links a{
