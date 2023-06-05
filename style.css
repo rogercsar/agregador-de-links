@@ -58,6 +58,35 @@ body * {
     margin-top: 8px;
 }
 
+/*Add link*/
+
+#addlink {
+    position: absolute;
+    width: 200px;
+    top: 5;
+    left: 5;
+    z-index: 1;
+}
+
+#addlink button {
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    width: 120px;
+    height: 30px;
+}
+
+#addlink button:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+#addlink a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+}
+
 
 /*Switch*/
 #switch {
