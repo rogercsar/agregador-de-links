@@ -32,4 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (currentTheme === 'light') document.documentElement.classList.add('light')
     if (currentTheme === 'dark') document.documentElement.classList.remove('light')
+
+    document.getElementById("btn1").setAttribute("href", localStorage.getItem('rogerlink:link1'))  
 })
+
+

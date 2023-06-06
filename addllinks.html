@@ -12,32 +12,32 @@
 </head>
 <body>
     <div id="container">
-        <div id="links-text"> 
+        <div id="links-text">            
             <fieldset>
                 <legend>1º Link</legend>
-                <input type="text" placeholder="Digite o Nome">
-                <input type="text" placeholder="Digite o link">
+                <input type="text" id="nameTask1" placeholder="Digite o Nome">
+                <input type="text" id="linkTask1" placeholder="Digite o link">
+            </fieldset>     
+            <fieldset>
+                <legend>2º Link</legend>
+                <input type="text" id="nameTask2" placeholder="Digite o Nome">
+                <input type="text" id="linkTask2" placeholder="Digite o link">
             </fieldset>       
             <fieldset>
-                <legend>2º link</legend>
-                <input type="text" placeholder="Digite o Nome">
-                <input type="text" placeholder="Digite o link">
-            </fieldset>
+                <legend>3º Link</legend>
+                <input type="text" id="nameTask3" placeholder="Digite o Nome">
+                <input type="text" id="linkTask3" placeholder="Digite o link">
+            </fieldset>       
             <fieldset>
-                <legend>3º link</legend>
-                <input type="text" placeholder="Digite o Nome">
-                <input type="text" placeholder="Digite o link">
-            </fieldset>
-            <fieldset>
-                <legend>4º link</legend>
-                <input type="text" placeholder="Digite o Nome">
-                <input type="text" placeholder="Digite o link">
-            </fieldset>
+                <legend>4º Link</legend>
+                <input type="text" id="nameTask4" placeholder="Digite o Nome">
+                <input type="text" id="linkTask4" placeholder="Digite o link">
+            </fieldset>         
         </div>    
 
         <ul>
             <li>
-                <a href="#">Salvar</a>
+                <a id="buttonSave" href="./index.html" onclick="saveLinks()">Salvar</a>
             </li>
             <li>
                 <a  href="./index.html">Cancelar</a>
@@ -48,6 +48,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="./script.js"></script>
+    <script src="./addlinks.js"></script>
     <script>
         const currentTheme = localStorage.getItem('rogerlink:theme')
 
