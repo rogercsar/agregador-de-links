@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="editprofile.css"/>
+</head>
+<body>
+    <div id="container">
+        <div id="profile">
+            <img id="avatar" onclick="trocaImagem()" src="./assets/dark-mode.png" alt="Foto de Roger César">
+            <input type='file' id="upload" accept="image/*">
+            <a><p id="tagUser">@rogercsar</p></a>
+        </div>
+        <div id="links-text">            
+            <fieldset>
+                <legend>Digite seu nome</legend>
+                <input type="text" id="usuario" placeholder="Digite o Nome">
+            </fieldset>     
+        </div>
+
+        <ul>
+            <li>
+                <a id="buttonSave" href="./index.html" onclick="saveProfile()">Salvar</a>
+            </li>
+            <li>
+                <a  href="./index.html">Cancelar</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <script>
+        const currentTheme = localStorage.getItem('rogerlink:theme')        
+
+        if (currentTheme === 'dark') document.documentElement.classList.remove('light')
+        if (currentTheme === 'light') document.documentElement.classList.add('light')
+    </script> 
+    <script src="./editprofile.js"></script>   
+</body>
+<footer>
+    Feito com 🖤 pelo Roger
+</footer>
+</html>

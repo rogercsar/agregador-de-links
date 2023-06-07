@@ -9,11 +9,9 @@ function toggleMode() {
     if (currentTheme === 'light') {
         localStorage.setItem('rogerlink:theme', 'dark')
         html.classList.remove('light')
-        photo.src = localStorage.getItem('avatar')
     } else {
         localStorage.setItem('rogerlink:theme', 'light')
         html.classList.add('light')
-        photo.src = localStorage.getItem('avatar')
     }
     
     //Pegar tag img
@@ -26,11 +24,14 @@ function toggleMode() {
       //img.setAttribute('src', './assets/dark-mode.png') 
     }
 
-    photo.src = localStorage.getItem('avatar')
+    img.src = localStorage.getItem('avatar')
 
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const user = localStorage.getItem('username')
+    const arroba = document.getElementById("tagUser")
+    let img = document.querySelector("#profile img")
     const currentTheme = localStorage.getItem('rogerlink:theme')
     const gnome1 = localStorage.getItem('nome1')
     const glink1 = localStorage.getItem('link1')
@@ -63,34 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
     btn4.innerHTML = gnome4
     btn4.setAttribute("href", glink4)
 
-    photo.src = localStorage.getItem('avatar')
+    img.src = localStorage.getItem('avatar')
+    arroba.innerHTML = localStorage.getItem('username')
 
 })
 
-function trocaImagem(input) {
-  let photo = document.getElementById('avatar');
-  let file = document.getElementById('upload');
-  
-  photo.addEventListener('click', () => {
-    file.click();
-  });
 
-  file.addEventListener('change', () => {
-
-    if(file.files.length<= 0){
-        return;
-    }
-
-    let reader = new FileReader();
-
-    reader.readAsDataURL(file.files[0]);
-    
-    reader.addEventListener('load', () => {
-        const url = reader.result;
-        photo.src = url;
-        localStorage.setItem('avatar', url);
-        
-    });
-   
-  });
-}
