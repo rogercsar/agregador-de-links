@@ -5,24 +5,29 @@ function toggleMode() {
     // localStorage.setItem('rogerlink:theme', 'light')
 
     const currentTheme = localStorage.getItem('rogerlink:theme')
-
+   
     if (currentTheme === 'light') {
         localStorage.setItem('rogerlink:theme', 'dark')
         html.classList.remove('light')
+        photo.src = localStorage.getItem('avatar')
     } else {
         localStorage.setItem('rogerlink:theme', 'light')
         html.classList.add('light')
+        photo.src = localStorage.getItem('avatar')
     }
     
     //Pegar tag img
-    const img = document.querySelector("#profile img")
+    let img = document.querySelector("#profile img")
 
     //Substituir Imagem
     if (html.classList.contains('light')) {
-       img.setAttribute('src', './assets/light-mode.png') 
+     //img.setAttribute('src', './assets/light-mode.png') 
     } else {
-        img.setAttribute('src', './assets/dark-mode.png') 
+      //img.setAttribute('src', './assets/dark-mode.png') 
     }
+
+    photo.src = localStorage.getItem('avatar')
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -57,5 +62,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btn4.innerHTML = gnome4
     btn4.setAttribute("href", glink4)
+
+    photo.src = localStorage.getItem('avatar')
+
 })
 
+function trocaImagem(input) {
+  let photo = document.getElementById('avatar');
+  let file = document.getElementById('upload');
+  
+  photo.addEventListener('click', () => {
+    file.click();
+  });
+
+  file.addEventListener('change', () => {
+
+    if(file.files.length<= 0){
+        return;
+    }
+
+    let reader = new FileReader();
+
+    reader.readAsDataURL(file.files[0]);
+    
+    reader.addEventListener('load', () => {
+        const url = reader.result;
+        photo.src = url;
+        localStorage.setItem('avatar', url);
+        
+    });
+   
+  });
+}
