@@ -16,7 +16,7 @@ function toggleMode() {
     
     //Pegar tag img
     let img = document.querySelector("#profile img")
-
+    
     //Substituir Imagem
     if (html.classList.contains('light')) {
      //img.setAttribute('src', './assets/light-mode.png') 
@@ -64,7 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
     btn4.innerHTML = gnome4
     btn4.setAttribute("href", glink4)
 
-    img.src = localStorage.getItem('avatar')
+    if (localStorage.getItem('avatar') == ""){
+        localStorage.setItem('avatar', 'https://cdn-icons-png.flaticon.com/512/5987/5987424.png');
+        img.src = localStorage.getItem('avatar')
+    } else {
+        img.src = localStorage.getItem('avatar')
+    }   
     arroba.innerHTML = localStorage.getItem('username')
 
 })
