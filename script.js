@@ -70,7 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
     //} else {
      img.src = localStorage.getItem('avatar')
     //}   
-    arroba.innerHTML = localStorage.getItem('username')
+    if(user == ""){
+        arroba.innerHTML = "@username";
+    } else {    
+        arroba.innerHTML = localStorage.getItem('username')
+    
+}
 
 })
 
