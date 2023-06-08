@@ -80,13 +80,14 @@
 }
 
 #links-text fieldset input {
-    width: 310px;
+    width: 280px;
     height: 40px;
     color: black;
     font-weight: 400;
     font-size: 14px;
     border-radius: 5px;
     margin: 2px;
+    text-align: center;
 }
 
 
