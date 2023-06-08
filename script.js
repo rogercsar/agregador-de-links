@@ -64,12 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
     btn4.innerHTML = gnome4
     btn4.setAttribute("href", glink4)
 
-    if (localStorage.getItem('avatar') == ""){
+    //if (localStorage.getItem('avatar') == ""){
         localStorage.setItem('avatar', 'https://cdn-icons-png.flaticon.com/512/5987/5987424.png');
-        img.src = localStorage.getItem('avatar')
-    } else {
-        img.src = localStorage.getItem('avatar')
-    }   
+    //   img.src = localStorage.getItem('avatar')
+    //} else {
+     img.src = localStorage.getItem('avatar')
+    //}   
     arroba.innerHTML = localStorage.getItem('username')
 
 })
