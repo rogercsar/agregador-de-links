@@ -29,54 +29,74 @@ function toggleMode() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const btnLogin = document.querySelector("#btnLogin")
+    const linkPerfil = document.querySelector("#linkPerfil")
     const user = localStorage.getItem('username')
     const arroba = document.getElementById("tagUser")
     let img = document.querySelector("#profile img")
     const currentTheme = localStorage.getItem('rogerlink:theme')
-    const gnome1 = localStorage.getItem('nome1')
-    const glink1 = localStorage.getItem('link1')
-    let btn1 = document.querySelector("#btn1")
+    const btn1 = document.getElementById('btn1')
+    const btn2 = document.getElementById('btn2')
+    const btn3 = document.getElementById('btn3')
+    const btn4 = document.getElementById('btn4')
+    let link1 = JSON.parse(localStorage.getItem('link'))
+    let link2 = JSON.parse(localStorage.getItem('link2'))
+    let link3 = JSON.parse(localStorage.getItem('link3'))
+    let link4 = JSON.parse(localStorage.getItem('link4'))
+   
+    if(link1.nome == ""){
+        btn1.textContent = "Adicionar link"
+    } else {
+        btn1.textContent = link1.nome;
+        btn1.setAttribute("href", link1.link)
+    }
+  
+    if(link2.nome == ""){
+        btn2.textContent = "Adicionar link"
+    } else {
+        btn2.textContent = link2.nome;
+        btn2.setAttribute("href", link2.link)
+    }
+  
+    if(link3.nome == ""){
+        btn3.textContent = "Adicionar link"
+    } else {
+        btn3.textContent = link3.nome;
+        btn3.setAttribute("href", link3.link)
+    }
+   
+    if(link4.nome == ""){
+        btn4.textContent = "Adicionar link"
+    } else {
+        btn4.textContent = link4.nome;
+        btn4.setAttribute("href", link4.link)
+    }  
+ 
 
-    const gnome2 = localStorage.getItem('nome2')
-    const glink2 = localStorage.getItem('link2')
-    let btn2 = document.querySelector("#btn2")
-
-    const gnome3 = localStorage.getItem('nome3')
-    const glink3 = localStorage.getItem('link3')
-    let btn3 = document.querySelector("#btn3")
-
-    const gnome4 = localStorage.getItem('nome4')
-    const glink4 = localStorage.getItem('link4')
-    let btn4 = document.querySelector("#btn4")
+    if (localStorage.getItem('avatar') == ""){
+        img.src = "https://cdn-icons-png.flaticon.com/512/5987/5987424.png";
+    } 
     
+    if (localStorage.getItem('login') == "true"){
+        img.src = localStorage.getItem('avatar')
+        arroba.innerHTML = localStorage.getItem('username'); 
+        btnLogin.textContent = "Sair"       
+        linkPerfil.setAttribute("href", "http://127.0.0.1:5500/editprofile.html")
+    } else {
+        arroba.innerHTML = "@username";
+        btnLogin.textContent = "Login"
+        btnLogin.setAttribute("onclick", )
+        btnLogin.setAttribute("href", "http://127.0.0.1:5500/login.html")
+        linkPerfil.setAttribute("href", "http://127.0.0.1:5500/index.html")
+        img.src = "https://cdn-icons-png.flaticon.com/512/5987/5987424.png";
+        
+    }
+
     if (currentTheme === 'light') document.documentElement.classList.add('light')
     if (currentTheme === 'dark') document.documentElement.classList.remove('light')
 
-    btn1.innerHTML = gnome1   
-    btn1.setAttribute("href", glink1)
-
-    btn2.innerHTML = gnome2
-    btn2.setAttribute("href", glink2)
-
-    btn3.innerHTML = gnome3
-    btn3.setAttribute("href", glink3)
-
-    btn4.innerHTML = gnome4
-    btn4.setAttribute("href", glink4)
-
-    //if (localStorage.getItem('avatar') == ""){
-        localStorage.setItem('avatar', 'https://cdn-icons-png.flaticon.com/512/5987/5987424.png');
-    //   img.src = localStorage.getItem('avatar')
-    //} else {
-     img.src = localStorage.getItem('avatar')
-    //}   
-    if(user == ""){
-        arroba.innerHTML = "@username";
-    } else {    
-        arroba.innerHTML = localStorage.getItem('username')
-    
-}
-
 })
 
-
+function Logout(){
+      
+}

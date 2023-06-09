@@ -11,18 +11,19 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div id="addlink">
+    <div id="linkLogin">
         <button>
-           <a href="./addllinks.html">
-            Atualizar Links
+           <a id="btnLogin" href="./login.html">
+             Login 
            </a> 
         </button>
     </div>
+
     <div id="container">
         <div id="profile">
-            <img id="avatar" onclick="trocaImagem()" src="./assets/perfil3.png" alt="Foto de Roger César">
+            <img id="avatar" onclick="trocaImagem()" src="./assets/perfil3.png" alt="">
             <input type='file' id="upload" accept="image/*">
-            <a href="./editprofile.html"><p id="tagUser">@rogercsar</p></a>
+            <a id="linkPerfil" href="./editprofile.html"><p id="tagUser">@rogercsar</p></a>
         </div>
         
         <div id="switch" onclick="toggleMode()">
@@ -30,6 +31,7 @@
             <span></span>
         </div>
 
+      
         <ul>
             <li>
                 <a id="btn1" href="https://github.com/rogercsar/curriculo/blob/main/Curriculo_RogerDevJr.pdf" target="_blank">Currículo</a>

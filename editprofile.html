@@ -13,7 +13,7 @@
 <body>
     <div id="container">
         <div id="profile">
-            <img id="avatar" onclick="trocaImagem()" src="./assets/dark-mode.png" alt="Foto de Roger César">
+            <img id="avatar" onclick="trocaImagem()" src="./assets/perfil3.png" alt="Foto Perfil">
             <input type='file' id="upload" accept="image/*">
             <a><p id="tagUser">@rogercsar</p></a>
         </div>
@@ -21,15 +21,35 @@
             <fieldset>
                 <legend>Digite seu nome</legend>
                 <input type="text" id="usuario" placeholder="Digite o Nome">
+            </fieldset>                
+            <fieldset>
+                <legend>1º Link</legend>
+                <input type="text" id="nameTask1" placeholder="Digite o Nome">
+                <input type="text" id="linkTask1" placeholder="Digite o link">
             </fieldset>     
-        </div>
+            <fieldset>
+                <legend>2º Link</legend>
+                <input type="text" id="nameTask2" placeholder="Digite o Nome">
+                <input type="text" id="linkTask2" placeholder="Digite o link">
+            </fieldset>       
+            <fieldset>
+                <legend>3º Link</legend>
+                <input type="text" id="nameTask3" placeholder="Digite o Nome">
+                <input type="text" id="linkTask3" placeholder="Digite o link">
+            </fieldset>       
+            <fieldset>
+                <legend>4º Link</legend>
+                <input type="text" id="nameTask4" placeholder="Digite o Nome">
+                <input type="text" id="linkTask4" placeholder="Digite o link">
+            </fieldset>         
+        </div>    
 
         <ul>
             <li>
                 <a id="buttonSave" href="./index.html" onclick="saveProfile()">Salvar</a>
             </li>
             <li>
-                <a  href="./index.html">Cancelar</a>
+                <a href="./index.html">Cancelar</a>
             </li>
         </ul>
     </div>

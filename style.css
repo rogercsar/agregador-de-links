@@ -39,7 +39,6 @@ body * {
     margin: 10px auto 0px;
 }
 
-
 /*Profile*/
 
 #profile input {
@@ -86,9 +85,9 @@ body * {
     text-decoration: none;
 }
 
-/*Add link*/
+/*BTN login*/
 
-#addlink {
+#linkLogin {
     position: absolute;
     width: 200px;
     top: 5;
@@ -96,7 +95,7 @@ body * {
     z-index: 1;
 }
 
-#addlink button {
+#linkLogin button {
     background: var(--surface-color);
     border: 1px solid var(--stroke-color);
     border-radius: 8px;
@@ -104,17 +103,16 @@ body * {
     height: 30px;
 }
 
-#addlink button:hover {
+#linkLogin button:hover {
     background: var(--surface-color-hover);
     border: 1.5px solid var(--text-color);
 }
 
-#addlink a {
+#linkLogin a {
     text-decoration: none;
     font-size: 12px;
     font-weight: 500;
 }
-
 
 /*Switch*/
 #switch {
@@ -194,7 +192,7 @@ ul li a:hover {
     display: flex;
     justify-content: center;
     padding: 24px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 #social-links a{
