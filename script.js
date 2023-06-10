@@ -45,28 +45,32 @@ document.addEventListener('DOMContentLoaded', () => {
     let link4 = JSON.parse(localStorage.getItem('link4'))
    
     if(link1.nome == ""){
-        btn1.textContent = "Adicionar link"
+        link1.nome = 'Adicionar link'
+        btn1.textContent = link1.nome
     } else {
         btn1.textContent = link1.nome;
         btn1.setAttribute("href", link1.link)
     }
   
     if(link2.nome == ""){
-        btn2.textContent = "Adicionar link"
+        link2.nome = "Adicionar link"
+        btn2.textContent = link2.nome
     } else {
         btn2.textContent = link2.nome;
         btn2.setAttribute("href", link2.link)
     }
   
     if(link3.nome == ""){
-        btn3.textContent = "Adicionar link"
+        link3.nome = "Adicionar link"
+        btn3.textContent = link3.nome
     } else {
         btn3.textContent = link3.nome;
         btn3.setAttribute("href", link3.link)
     }
    
     if(link4.nome == ""){
-        btn4.textContent = "Adicionar link"
+        link4.nome = "Adicionar link"
+        btn4.textContent = link4.nome
     } else {
         btn4.textContent = link4.nome;
         btn4.setAttribute("href", link4.link)
@@ -81,13 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
         img.src = localStorage.getItem('avatar')
         arroba.innerHTML = localStorage.getItem('username'); 
         btnLogin.textContent = "Sair"       
-        linkPerfil.setAttribute("href", "http://127.0.0.1:5500/editprofile.html")
+        linkPerfil.setAttribute("href", "editprofile.html")
     } else {
         arroba.innerHTML = "@username";
         btnLogin.textContent = "Login"
         btnLogin.setAttribute("onclick", )
-        btnLogin.setAttribute("href", "http://127.0.0.1:5500/login.html")
-        linkPerfil.setAttribute("href", "http://127.0.0.1:5500/index.html")
+        btnLogin.setAttribute("href", "login.html")
+        linkPerfil.setAttribute("href", "index.html")
         img.src = "https://cdn-icons-png.flaticon.com/512/5987/5987424.png";
         
     }
