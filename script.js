@@ -82,25 +82,27 @@ document.addEventListener('DOMContentLoaded', () => {
     } 
     
     if (localStorage.getItem('login') == "true"){
-        img.src = localStorage.getItem('avatar')
         arroba.innerHTML = localStorage.getItem('username'); 
-        btnLogin.textContent = "Sair"       
-        linkPerfil.setAttribute("href", "editprofile.html")
+        btnLogin.textContent = "Sair";       
+        linkPerfil.setAttribute("href", "editprofile.html");
+        if (localStorage.getItem('avatar') == ""){
+            img.src = "https://cdn-icons-png.flaticon.com/512/5987/5987424.png";
+        } else {
+            img.src = localStorage.getItem('avatar');
+        } 
     } else {
         arroba.innerHTML = "@username";
-        btnLogin.textContent = "Login"
-        btnLogin.setAttribute("onclick", )
-        btnLogin.setAttribute("href", "login.html")
-        linkPerfil.setAttribute("href", "index.html")
-        img.src = "https://cdn-icons-png.flaticon.com/512/5987/5987424.png";
-        
+        btnLogin.textContent = "Login";
+        btnLogin.setAttribute("href", "login.html");
+        linkPerfil.setAttribute("href", "index.html");
+        img.src = "https://cdn-icons-png.flaticon.com/512/5987/5987424.png";        
     }
 
-    if (currentTheme === 'light') document.documentElement.classList.add('light')
-    if (currentTheme === 'dark') document.documentElement.classList.remove('light')
+    if (currentTheme === 'light') document.documentElement.classList.add('light');
+    if (currentTheme === 'dark') document.documentElement.classList.remove('light');
 
 })
 
 function Logout(){
-      
+      alert("Saindo")
 }

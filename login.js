@@ -11,3 +11,7 @@ function enterLogin() {
         localStorage.setItem("login", false);
     }
 }
+
+function sairLogin() {
+    
+}
