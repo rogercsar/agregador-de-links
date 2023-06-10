@@ -29,6 +29,12 @@ function toggleMode() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('linkLogin')
+    const btnSair = document.createElement('button');
+    btnSair.type = 'button';
+    btnSair.innerHTML = 'Sair';
+    btnSair.id = 'btnSair'
+    btnSair.onclick = Logout();
     const btnLogin = document.querySelector("#btnLogin")
     const linkPerfil = document.querySelector("#linkPerfil")
     const user = localStorage.getItem('username')
@@ -43,34 +49,56 @@ document.addEventListener('DOMContentLoaded', () => {
     let link2 = JSON.parse(localStorage.getItem('link2'))
     let link3 = JSON.parse(localStorage.getItem('link3'))
     let link4 = JSON.parse(localStorage.getItem('link4'))
+
+    
    
-    if(link1.nome == ""){
-        link1.nome = 'Adicionar link'
+    if(link1 == ""){
+        const link1 = {
+            nome: "Adicionar link",
+            link: "#"
+          }
+        localStorage.setItem("link", JSON.stringify(link1));
         btn1.textContent = link1.nome
+        btn1.setAttribute("href", "#")
     } else {
         btn1.textContent = link1.nome;
         btn1.setAttribute("href", link1.link)
     }
   
-    if(link2.nome == ""){
-        link2.nome = "Adicionar link"
+    if(link2 == ""){
+        const link2 = {
+            nome: "Adicionar link",
+            link: "#"
+          }
+        localStorage.setItem("link2", JSON.stringify(link2));
         btn2.textContent = link2.nome
+        btn2.setAttribute("href", "#")
     } else {
         btn2.textContent = link2.nome;
         btn2.setAttribute("href", link2.link)
     }
   
-    if(link3.nome == ""){
-        link3.nome = "Adicionar link"
+    if(link3 == ""){
+        const link3 = {
+            nome: "Adicionar link",
+            link: "#"
+          }
+        localStorage.setItem("link3", JSON.stringify(link3));
         btn3.textContent = link3.nome
+        btn3.setAttribute("href", "#")
     } else {
         btn3.textContent = link3.nome;
         btn3.setAttribute("href", link3.link)
     }
    
-    if(link4.nome == ""){
-        link4.nome = "Adicionar link"
+    if(link4 == ""){
+        const link4 = {
+            nome: "Adicionar link",
+            link: "#"
+          }
+        localStorage.setItem("link4", JSON.stringify(link4));
         btn4.textContent = link4.nome
+        btn4.setAttribute("href", "#")
     } else {
         btn4.textContent = link4.nome;
         btn4.setAttribute("href", link4.link)
@@ -82,8 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } 
     
     if (localStorage.getItem('login') == "true"){
-        arroba.innerHTML = localStorage.getItem('username'); 
-        btnLogin.textContent = "Sair";       
+        arroba.innerHTML = localStorage.getItem('username');    
+        btnLogin.parentNode.remove();  
+        container.appendChild(btnSair);  
         linkPerfil.setAttribute("href", "editprofile.html");
         if (localStorage.getItem('avatar') == ""){
             img.src = "https://cdn-icons-png.flaticon.com/512/5987/5987424.png";
@@ -92,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } 
     } else {
         arroba.innerHTML = "@username";
+        container.appendChild(btnLogin);
         btnLogin.textContent = "Login";
         btnLogin.setAttribute("href", "login.html");
         linkPerfil.setAttribute("href", "index.html");
@@ -104,5 +134,5 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function Logout(){
-      alert("Saindo")
+      localStorage.clear();
 }
